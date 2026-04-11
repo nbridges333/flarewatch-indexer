@@ -1,0 +1,6 @@
+type WNat_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  value: BigInt!
+}

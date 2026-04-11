@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: flarewatch-indexer
+networks:
+- id: 14
+  start_block: 0
+  contracts:
+  - name: WNat
+    address:
+    - 0x1D80c49BbBCd1C0911346656B529DF9E5c2F783d
+    handler: src/EventHandlers.ts
+    events:
+    - event: Transfer(address indexed from, address indexed to, uint256 value)
+unordered_multichain_mode: true
+preload_handlers: true
