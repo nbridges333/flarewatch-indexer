@@ -10,5 +10,13 @@ networks:
     handler: src/EventHandlers.ts
     events:
     - event: Transfer(address indexed from, address indexed to, uint256 value)
+  - name: RewardManager
+    address:
+    - 0xc8f55c5aa2c752ee285bd872855c749f4ee6239b
+    handler: src/EventHandlers.ts
+    events:
+    - event: RewardClaimed(address indexed beneficiary, address indexed rewardOwner, address indexed recipient, uint24 rewardEpochId, uint8 claimType, uint120 amount)
+    - event: RewardClaimsExpired(uint256 indexed rewardEpochId)
+    - event: RewardClaimsEnabled(uint256 indexed rewardEpochId)
 unordered_multichain_mode: true
 preload_handlers: true

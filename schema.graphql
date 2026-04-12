@@ -4,3 +4,23 @@ type WNat_Transfer {
   to: String!
   value: BigInt!
 }
+
+type RewardManager_RewardClaimed {
+  id: ID!
+  beneficiary: String!
+  rewardOwner: String!
+  recipient: String!
+  rewardEpochId: BigInt!
+  claimType: BigInt!
+  amount: BigInt!
+}
+
+type RewardManager_RewardClaimsExpired {
+  id: ID!
+  rewardEpochId: BigInt!
+}
+
+type RewardManager_RewardClaimsEnabled {
+  id: ID!
+  rewardEpochId: BigInt!
+}
